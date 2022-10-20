@@ -10,6 +10,12 @@
     <groupId>com.yusa</groupId>
     <artifactId>blog_admin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-
+    <dependencies>
+        <dependency>
+            <groupId>com.yusa</groupId>
+            <artifactId>blog_framework</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>

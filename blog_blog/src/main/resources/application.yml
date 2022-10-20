@@ -12,7 +12,7 @@ spring:
       max-request-size: 5MB
 mybatis-plus:
   configuration:
-    # »’÷æ
+
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   global-config:
     db-config:

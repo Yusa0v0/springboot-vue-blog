@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="blog_admin" />
-        <module name="springboot-vue-blog" />
         <module name="blog_blog" />
         <module name="blog_framework" />
       </profile>
@@ -16,14 +15,15 @@
       <module name="blog_admin" target="1.8" />
       <module name="blog_blog" target="1.8" />
       <module name="blog_framework" target="1.8" />
+      <module name="son" target="1.8" />
       <module name="springboot-vue-blog" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="blog_admin" options="-parameters" />
-      <module name="blog_blog" options="-parameters" />
-      <module name="blog_framework" options="-parameters" />
+      <module name="blog_admin" options="" />
+      <module name="blog_blog" options="" />
+      <module name="blog_framework" options="" />
     </option>
   </component>
 </project>

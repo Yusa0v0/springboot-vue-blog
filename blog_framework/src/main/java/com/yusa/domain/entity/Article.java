@@ -9,6 +9,7 @@ import java.util.Date;
  * @since 2022-10-20 22:26:42
  */
 @SuppressWarnings("serial")
+
 public class Article {
 
     private Long id;

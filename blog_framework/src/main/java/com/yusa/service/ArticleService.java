@@ -1,4 +1,4 @@
-package com.yusa.domain.service;
+package com.yusa.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.yusa.domain.entity.Article;

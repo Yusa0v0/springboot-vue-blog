@@ -1,5 +1,6 @@
 package com.yusa.controller;
 
+import com.yusa.domain.ResponseResult;
 import com.yusa.domain.entity.Article;
 import com.yusa.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,10 @@ public class ArticleController {
     @GetMapping("/list")
     public List<Article> test(){
         return articleService.list();
-
+    }
+    @GetMapping("/hotArticleList")
+    public ResponseResult hotArticleList(){
+        ResponseResult responseResult = articleService.hotArticleList();
+        return responseResult;
     }
 }

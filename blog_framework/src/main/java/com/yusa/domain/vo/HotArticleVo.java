@@ -41,4 +41,13 @@ public class HotArticleVo {
     public void setViewCount(Long viewCount) {
         this.viewCount = viewCount;
     }
+
+    @Override
+    public String toString() {
+        return "HotArticleVo{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", viewCount=" + viewCount +
+                '}';
+    }
 }

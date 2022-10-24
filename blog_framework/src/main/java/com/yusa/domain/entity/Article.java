@@ -1,5 +1,7 @@
 package com.yusa.domain.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+
 import java.util.Date;
 
 /**
@@ -21,6 +23,9 @@ public class Article {
     private String summary;
     //所属分类id
     private Long categoryId;
+    //所属分类名字
+    @TableField(exist = false)
+    private String categoryName;
     //缩略图
     private String thumbnail;
     //是否置顶（0否，1是）
@@ -162,7 +167,13 @@ public class Article {
     public void setDelFlag(Integer delFlag) {
         this.delFlag = delFlag;
     }
+    public String getCategoryName() {
+        return categoryName;
+    }
 
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
     public Article() {
     }
 

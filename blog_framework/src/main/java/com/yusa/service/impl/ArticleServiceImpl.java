@@ -8,6 +8,7 @@ import com.yusa.domain.entity.Article;
 import com.yusa.domain.vo.HotArticleVo;
 import com.yusa.mapper.ArticleMapper;
 import com.yusa.service.ArticleService;
+import com.yusa.utils.BeanCopyUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
@@ -35,14 +36,14 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         Page<Article> page = new Page(1,10);
         page(page,queryWrapper);
         List<Article> articleList= page.getRecords();
-        List<HotArticleVo> hotArticleVoList = new ArrayList<>();
-        for (Article article:articleList) {
-            HotArticleVo vo = new HotArticleVo();
-            BeanUtils.copyProperties(article,vo);
-            hotArticleVoList.add(vo);
-        }
-
-        return ResponseResult.okResult(hotArticleVoList);
+//        List<HotArticleVo> hotArticleVoList = new ArrayList<>();
+//        for (Article article:articleList) {
+//            HotArticleVo vo = new HotArticleVo();
+//            BeanUtils.copyProperties(article,vo);
+//            hotArticleVoList.add(vo);
+//        }
+        List<HotArticleVo> vs = BeanCopyUtils.copyBeanList(articleList, HotArticleVo.class);
+        return ResponseResult.okResult(vs);
     }
 
 
